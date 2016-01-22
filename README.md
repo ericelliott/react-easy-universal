@@ -102,13 +102,12 @@ You'll need to create three files:
 
 ```js
 import universal from 'react-easy-universal';
-import React from 'react';
 
 import routes from './path/to/your/routes';
 import reducers from './path/to/your/reducers';
 
 const createApp = ({
-  app
+  React, app
 }) => universal({
   app, React, routes, reducers
 });
@@ -133,6 +132,7 @@ app(); // returns a function that must be invoked to trigger render
 
 ```js
 import express from 'express';
+import React from 'react';
 
 import renderLayout from './path/to/render-layout.js';
 import createApp from './path/to/create-app.js';
@@ -187,12 +187,12 @@ Need to customize layouts, the root React Node, the root route, and so on? No pr
 
 ```js
 import universal from 'react-easy-universal';
-import React from 'react';
 
 import routes from './path/to/your/routes';
 import reducers from './path/to/your/reducers';
 
 const createApp = ({
+  React,
   app,
   rootID, // default: 'root'
   rootRoute, // default: '/'
