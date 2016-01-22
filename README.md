@@ -4,7 +4,7 @@ An opinionated, batteries-included universal routing &amp; rendering library for
 
 ## Status
 
-Developer preview. Nothing to see, yet.
+Developer RDD preview. Nothing to see, yet.
 
 
 ## What's included?
