@@ -122,9 +122,10 @@ export default createApp;
 import React from 'react';
 import createApp from './path/to/create-app.js';
 
+// returns a function that must be invoked to trigger render
 const app = createApp({ React }); // use all the defaults
 
-app(); // returns a function that must be invoked to trigger render
+app();
 ```
 
 
@@ -192,14 +193,14 @@ import routes from './path/to/your/routes';
 import reducers from './path/to/your/reducers';
 
 const createApp = ({
-  React,
-  app,
+  React, app,
   rootID, // default: 'root'
   rootRoute, // default: '/'
   renderLayout // Skeleton DOM render template for the server-side. Default: Barebones ES6 template
 }) => universal({
-  app, rootId, rootRoute, renderLayout,
-  React, routes, reducers
+  React, app,
+  routes, reducers,
+  rootId, rootRoute, renderLayout
 });
 
 export default createApp;
