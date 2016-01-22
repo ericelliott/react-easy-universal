@@ -108,13 +108,9 @@ import routes from './path/to/your/routes';
 import reducers from './path/to/your/reducers';
 
 const createApp = ({
-  app,
-  rootID, // default: 'root'
-  rootRoute, // default: '/'
-  renderLayout // Skeleton DOM render template for the server-side. Default: Barebones ES6 template
+  app
 }) => universal({
-  app, rootId, rootRoute, renderLayout,
-  React, routes, reducers
+  app, React, routes, reducers
 });
 
 export default createApp;
@@ -182,4 +178,29 @@ export default (React, browserHistory) => {
     </Router>
   );
 };
+```
+
+
+## Advanced Example
+
+Need to customize layouts, the root React Node, the root route, and so on? No problem. Just make your `create-app.js` factory configurable:
+
+```js
+import universal from 'react-easy-universal';
+import React from 'react';
+
+import routes from './path/to/your/routes';
+import reducers from './path/to/your/reducers';
+
+const createApp = ({
+  app,
+  rootID, // default: 'root'
+  rootRoute, // default: '/'
+  renderLayout // Skeleton DOM render template for the server-side. Default: Barebones ES6 template
+}) => universal({
+  app, rootId, rootRoute, renderLayout,
+  React, routes, reducers
+});
+
+export default createApp;
 ```
