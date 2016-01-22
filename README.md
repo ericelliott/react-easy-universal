@@ -139,11 +139,11 @@ import createApp from './path/to/create-app.js';
 
 const expressApp = express();
 
-app.use('/static', express.static(staticDir));
-
 // Passing in the express app lets it know you want the server
 // version, and it wires up the route automatically
 const app = createApp({ React, expressApp });
+
+app.use('/static', express.static(staticDir));
 
 const port = process.env.APP_PORT || 3000;
 
