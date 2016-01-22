@@ -1,4 +1,4 @@
-# React Redux Universal
+# React Easy Universal
 
 An opinionated, batteries-included universal routing &amp; rendering library for React+Redux apps.
 
@@ -101,7 +101,7 @@ You'll need to create three files:
 `create-app.js`:
 
 ```js
-import universal from 'react-redux-universal';
+import universal from 'react-easy-universal';
 import React from 'react';
 
 import routes from './path/to/your/routes';
@@ -167,7 +167,7 @@ app.listen(port, (err) => {
 Use this module instead of depending directly on React Router, and we'll worry about keeping all the version dependencies compatable and in-sync for you.
 
 ```js
-import { Router, Route } from 'react-redux-universal';
+import { Router, Route } from 'react-easy-universal';
 
 import createHome from 'shared/components/home';
 import createTestData from 'shared/components/test-data';
