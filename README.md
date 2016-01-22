@@ -109,7 +109,7 @@ import reducers from './path/to/your/reducers';
 const createApp = ({
   React, app
 }) => universal({
-  app, React, routes, reducers
+  React, app, routes, reducers
 });
 
 export default createApp;
