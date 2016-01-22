@@ -1,6 +1,6 @@
 # React Easy Universal
 
-An opinionated, batteries-included universal routing &amp; rendering library for React+Redux apps.
+Universal Routing & Rendering with React & Redux was too hard. Now it's easy.
 
 ## Status
 
