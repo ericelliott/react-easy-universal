@@ -1,0 +1,27 @@
+{
+  "name": "react-easy-universal",
+  "version": "1.0.0",
+  "description": "Universal Routing & Rendering with React & Redux was too hard. Now it's easy.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "babel-node source/test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericelliott/react-easy-universal.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "routing",
+    "rendering",
+    "universal",
+    "javascript"
+  ],
+  "author": "Eric Elliott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericelliott/react-easy-universal/issues"
+  },
+  "homepage": "https://github.com/ericelliott/react-easy-universal#readme"
+}
