@@ -1,0 +1,9 @@
+node_modules
+!app/node_modules
+.DS_Store
+config/BUILD
+npm-debug.log
+app/node_modules/public/js/bundle.*
+build/
+.idea/
+.eslintcache
