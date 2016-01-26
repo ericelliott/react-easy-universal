@@ -87,9 +87,11 @@ export default (req, res) => {
 };
 ```
 
+There are a few other files I won't list, for brevity's sake.
+
 It took me two days to get these examples working in one of my own projects. 2 days of fiddling with dependencies, copying the exact versions out of the example repositories and into my `package.json`. FYI, at the time of this writing, the dependency versions in the example repo are not compatible with the client snippet above.
 
-So, you could track all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around. About as fun as herding cats.
+So, you could track all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around.
 
 Now let's look at what this could look like:
 
