@@ -4,7 +4,7 @@ Universal Routing & Rendering with React & Redux was too hard. Now it's easy.
 
 ## Status
 
-Developer RDD preview. Nothing usable to see, yet.
+Developer RDD preview. Nothing usable to try, yet.
 
 
 ## What's included?
