@@ -1,7 +1,7 @@
-import { Router, Route } from 'react-easy-universal';
+import { Router, Route } from '../../index';
 
-import createHome from 'shared/components/home';
-import createTestData from 'shared/components/test-data';
+const createHome = React => ({ title }) => <h1>{{ title }}</h1>;
+const createData = React => ({ data }) => <div>{{ data }}</div>;
 
 // It expects a factory function that it can inject dependencies into.
 export default (React, browserHistory) => {
@@ -9,7 +9,7 @@ export default (React, browserHistory) => {
   return (
     <Router history={ browserHistory }>
       <Route path="/" component={ createHome(React) } />
-      <Route path="/test-data" component={ createTestData(React) } />
+      <Route path="/data" component={ createData(React) } />
     </Router>
   );
 };

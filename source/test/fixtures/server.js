@@ -1,8 +1,7 @@
 import express from 'express';
 import React from 'react';
 
-import renderLayout from './path/to/render-layout.js';
-import createApp from './path/to/create-app.js';
+import createApp from './create-app.js';
 
 const expressApp = express();
 
