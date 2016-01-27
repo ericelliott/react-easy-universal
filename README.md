@@ -4,15 +4,16 @@ Universal Routing & Rendering with React & Redux was too hard. Now it's easy.
 
 ## Status
 
-Developer RDD preview. Nothing to see, yet.
+Developer RDD preview. Nothing usable to try, yet.
 
 
 ## What's included?
 
-* Redux
-* [React Router]()
-* Automatic syncing between Redux and React Router via [redux-simple-router](https://github.com/rackt/redux-simple-router)
-* History
+* [Redux](https://github.com/rackt/redux)
+* [React Router](https://github.com/rackt/react-router)
+* Automatic syncing between Redux and React Router via [react-router-redux](https://github.com/rackt/react-router-redux)
+* [History](https://github.com/rackt/history)
+* Debugging support
 
 ## Why is this needed? (AKA, the old `n` busted way)
 
@@ -87,9 +88,11 @@ export default (req, res) => {
 };
 ```
 
+There are a few other files I won't list, for brevity's sake.
+
 It took me two days to get these examples working in one of my own projects. 2 days of fiddling with dependencies, copying the exact versions out of the example repositories and into my `package.json`. FYI, at the time of this writing, the dependency versions in the example repo are not compatible with the client snippet above.
 
-So, you could track all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around. About as fun as herding cats.
+So, you could track all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around.
 
 Now let's look at what this could look like:
 
