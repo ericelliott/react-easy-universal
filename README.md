@@ -9,10 +9,11 @@ Developer RDD preview. Nothing usable to try, yet.
 
 ## What's included?
 
-* Redux
-* [React Router]()
-* Automatic syncing between Redux and React Router via [redux-simple-router](https://github.com/rackt/redux-simple-router)
-* History
+* [Redux](https://github.com/rackt/redux)
+* [React Router](https://github.com/rackt/react-router)
+* Automatic syncing between Redux and React Router via [react-router-redux](https://github.com/rackt/react-router-redux)
+* [History](https://github.com/rackt/history)
+* Debugging support
 
 ## Why is this needed? (AKA, the old `n` busted way)
 
