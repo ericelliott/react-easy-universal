@@ -3,10 +3,10 @@ import universal from '../../index';
 import routes from './routes';
 import reducers from './reducers';
 
-const createApp = ({
+const wireApp = ({
   React, app
 }) => universal({
   React, app, routes, reducers
 });
 
-export default createApp;
+export default wireApp;

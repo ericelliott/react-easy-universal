@@ -1,12 +1,10 @@
 import express from 'express';
 import React from 'react';
 
-import createApp from './create-app.js';
-
-const expressApp = express();
+import wireApp from './wire-app.js';
 
 // Passing in the express app lets it know you want the server
 // version, and it wires up the route automatically
-const app = createApp({ React, expressApp });
+const app = wireApp({ React, app: express() });
 
 export default app;

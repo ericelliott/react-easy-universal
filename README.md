@@ -205,3 +205,29 @@ const createApp = ({
 
 export default createApp;
 ```
+
+## Contributing
+
+There are some handy scripts for contributors, if you'd like to pitch in:
+
+### Dev console
+
+There's a dev console available that will show you any lint errors or test failures on file saves:
+
+```sh
+npm run watch
+```
+
+### Debugging
+
+To run the debugger, first, make sure it's installed:
+
+```sh
+npm install -g iron-node
+```
+
+Then:
+
+```
+npm run debug:test
+```
