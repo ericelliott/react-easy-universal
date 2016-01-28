@@ -17,8 +17,8 @@ export default (React, browserHistory) => {
     const component = ({ data }) => <div className="data">{ data }</div>;
 
     const mapStateToProps = (state) => {
-      const { title } = state;
-      return { title };
+      const { data } = state;
+      return { data };
     };
 
     return connect(mapStateToProps)(component);
