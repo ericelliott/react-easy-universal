@@ -88,11 +88,11 @@ export default (req, res) => {
 };
 ```
 
-There are a few other files I won't list, for brevity's sake.
+There are a few other files you need to wire up that I won't list, for brevity's sake.
 
-It took me two days to get these examples working in one of my own projects. 2 days of fiddling with dependencies, copying the exact versions out of the example repositories and into my `package.json`. FYI, at the time of this writing, the dependency versions in the example repo are not compatible with the client snippet above.
+It took me two days to get these examples working in one of my own projects. 2 days of fiddling with dependencies, copying the exact versions out of the example repositories and into my `package.json`. These projects are evolving quickly, and the documentation examples can't be relied on to work.
 
-So, you could track all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around.
+So, you could keep track of all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around.
 
 Now let's look at what this could look like:
 
@@ -101,21 +101,21 @@ Now let's look at what this could look like:
 
 You'll need to create three files:
 
-`create-app.js`:
+`wire-app.js`:
 
 ```js
 import universal from 'react-easy-universal';
 
-import routes from './path/to/your/routes';
-import reducers from './path/to/your/reducers';
+import routes from './routes';
+import reducers from './reducers';
 
-const createApp = ({
+const wireApp = ({
   React, app
 }) => universal({
   React, app, routes, reducers
 });
 
-export default createApp;
+export default wireApp;
 ```
 
 
@@ -123,10 +123,12 @@ export default createApp;
 
 ```js
 import React from 'react';
-import createApp from './path/to/create-app.js';
+import { browserHistory } from 'react-easy-universal';
+
+import wireApp from './wire-app.js';
 
 // returns a function that must be invoked to trigger render
-const app = createApp({ React }); // use all the defaults
+const app = wireApp({ React }); // use all the defaults
 
 app();
 ```
@@ -138,14 +140,11 @@ app();
 import express from 'express';
 import React from 'react';
 
-import renderLayout from './path/to/render-layout.js';
-import createApp from './path/to/create-app.js';
-
-const expressApp = express();
+import wireApp from './wire-app.js';
 
 // Passing in the express app lets it know you want the server
-// version, and it wires up the route automatically
-const app = createApp({ React, expressApp });
+// version, and it wires up the routes automatically
+const app = wireApp({ React, app: express() });
 
 app.use('/static', express.static(staticDir));
 
@@ -164,7 +163,7 @@ app.listen(port, (err) => {
 
 ### Defining Your Routes
 
-Use this module instead of depending directly on React Router, and we'll worry about keeping all the version dependencies compatable and in-sync for you.
+Use this module instead of depending directly on React Router, and we'll worry about keeping all the version dependencies compatible and in-sync for you.
 
 ```js
 import { Router, Route } from 'react-easy-universal';
