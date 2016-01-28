@@ -10,7 +10,7 @@ const universal = ({ React, app, routes, reducers }) => {
   // Server case. Plug in the express app.
   if (app) {
     const createHandler = require('./server').default;
-    const requestHandler = createHandler({ React, app, routes, reducers });
+    const requestHandler = createHandler({ React, app, createRoutes: routes, reducers });
 
     app.use('/', requestHandler);
 

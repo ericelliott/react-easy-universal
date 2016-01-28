@@ -1,9 +1,9 @@
-export default ({ settings, rootMarkup, initialState }) => {
+export default ({ rootMarkup, initialState }) => {
   return `
     <!doctype html>
     <html>
       <head>
-        <title>${ settings.TITLE }</title>
+        <title>${ initialState.title }</title>
       </head>
       <body>
         <div id='root'>${ rootMarkup }</div>
