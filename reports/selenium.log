@@ -1,0 +1,342 @@
+23:52:35.723 INFO - Launching a standalone Selenium Server
+Setting system property webdriver.chrome.driver to /Users/eric/Dropbox/dev/react-easy-universal/node_modules/selenium-standalone/.selenium/chromedriver/2.20-x64-chromedriver
+23:52:35.762 INFO - Java: Oracle Corporation 25.31-b07
+23:52:35.762 INFO - OS: Mac OS X 10.11.1 x86_64
+23:52:35.773 INFO - v2.48.0, with Core v2.48.0. Built from revision 41bccdd
+23:52:35.773 INFO - Selenium server running in debug mode.
+23:52:35.828 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+23:52:35.828 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+23:52:35.828 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+23:52:35.829 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+23:52:35.915 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+23:52:35.915 INFO - Selenium Server is up and running
+23:52:36.069 DEBUG - Handling: GET /status
+23:52:36.074 DEBUG - Executing: org.openqa.selenium.remote.server.handler.Status@723c68f9)
+23:52:36.076 DEBUG - Done: org.openqa.selenium.remote.server.handler.Status@723c68f9
+23:52:36.076 DEBUG - Finished: GET /status
+23:52:37.149 DEBUG - Handling: POST /session
+23:52:37.157 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Smoketest, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+23:52:37.174 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Smoketest, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+23:52:37.376 DEBUG - Executing: newSession [null, newSession {desiredCapabilities=Capabilities [{acceptSslCerts=true, name=Smoketest, browserName=chrome, javascriptEnabled=true, platform=ANY}]}]
+23:52:37.386 DEBUG - Waiting for [http://localhost:44585/status]
+23:52:37.387 DEBUG - Polling http://localhost:44585/status
+Starting ChromeDriver 2.20.353124 (035346203162d32c80f1dce587c8154a1efa0c3b) on port 44585
+Only local connections are allowed.
+23:52:37.899 DEBUG - Polling http://localhost:44585/status
+23:52:37.902 DEBUG - sun.net.www.MessageHeader@8d3e7665 pairs: {GET /status HTTP/1.1: null}{User-Agent: Java/1.8.0_31}{Host: localhost:44585}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+23:52:37.905 DEBUG - sun.net.www.MessageHeader@614180c4 pairs: {null: HTTP/1.1 200 OK}{Content-Length: 126}{Content-Type: application/json; charset=utf-8}{Connection: close}
+23:52:37.926 DEBUG - CookieSpec selected: default
+23:52:37.932 DEBUG - Auth cache not set in the context
+23:52:37.933 DEBUG - Connection request: [route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:37.942 DEBUG - Connection leased: [id: 0][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+23:52:37.943 DEBUG - Opening connection {}->http://localhost:44585
+23:52:37.944 DEBUG - Connecting to localhost/127.0.0.1:44585
+23:52:37.945 DEBUG - Connection established 127.0.0.1:55751<->127.0.0.1:44585
+23:52:37.946 DEBUG - http-outgoing-0: set socket timeout to 10800000
+23:52:37.946 DEBUG - Executing request POST /session HTTP/1.1
+23:52:37.946 DEBUG - Target auth state: UNCHALLENGED
+23:52:37.946 DEBUG - Proxy auth state: UNCHALLENGED
+23:52:37.947 DEBUG - http-outgoing-0 >> POST /session HTTP/1.1
+23:52:37.947 DEBUG - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+23:52:37.947 DEBUG - http-outgoing-0 >> Content-Length: 131
+23:52:37.948 DEBUG - http-outgoing-0 >> Host: localhost:44585
+23:52:37.948 DEBUG - http-outgoing-0 >> Connection: Keep-Alive
+23:52:37.948 DEBUG - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)
+23:52:37.948 DEBUG - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+23:52:37.948 DEBUG - http-outgoing-0 >> "POST /session HTTP/1.1[\r][\n]"
+23:52:37.948 DEBUG - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+23:52:37.948 DEBUG - http-outgoing-0 >> "Content-Length: 131[\r][\n]"
+23:52:37.949 DEBUG - http-outgoing-0 >> "Host: localhost:44585[\r][\n]"
+23:52:37.949 DEBUG - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+23:52:37.949 DEBUG - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)[\r][\n]"
+23:52:37.949 DEBUG - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:52:37.949 DEBUG - http-outgoing-0 >> "[\r][\n]"
+23:52:37.949 DEBUG - http-outgoing-0 >> "{"desiredCapabilities":{"name":"Smoketest","browserName":"chrome","javascriptEnabled":true,"acceptSslCerts":true,"platform":"ANY"}}"
+23:52:38.512 DEBUG - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+23:52:38.512 DEBUG - http-outgoing-0 << "Content-Length:624[\r][\n]"
+23:52:38.512 DEBUG - http-outgoing-0 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+23:52:38.513 DEBUG - http-outgoing-0 << "Connection:close[\r][\n]"
+23:52:38.513 DEBUG - http-outgoing-0 << "[\r][\n]"
+23:52:38.513 DEBUG - http-outgoing-0 << "{"sessionId":"1e72dfbb89fffe92e403016fa4134152","status":0,"value":{"acceptSslCerts":true,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"browserName":"chrome","chrome":{"userDataDir":"/var/folders/4r/vxjdd9_x5gbbdq001b4ctgbh0000gn/T/.org.chromium.Chromium.T9Hkwj"},"cssSelectorsEnabled":true,"databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":false,"javascriptEnabled":true,"locationContextEnabled":true,"mobileEmulationEnabled":false,"nativeEvents":true,"platform":"Mac OS X","rotatable":false,"takesHeapSnapshot":true,"takesScreenshot":true,"version":"48.0.2564.97","webStorageEnabled":true}}"
+23:52:38.515 DEBUG - http-outgoing-0 << HTTP/1.1 200 OK
+23:52:38.515 DEBUG - http-outgoing-0 << Content-Length:624
+23:52:38.516 DEBUG - http-outgoing-0 << Content-Type:application/json; charset=utf-8
+23:52:38.516 DEBUG - http-outgoing-0 << Connection:close
+23:52:38.522 DEBUG - http-outgoing-0: Close connection
+23:52:38.522 DEBUG - Connection discarded
+23:52:38.523 DEBUG - Connection released: [id: 0][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.524 DEBUG - Executed: [null, newSession {desiredCapabilities=Capabilities [{acceptSslCerts=true, name=Smoketest, browserName=chrome, javascriptEnabled=true, platform=ANY}]}]
+23:52:38.544 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Smoketest, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+23:52:38.544 DEBUG - Finished: POST /session
+23:52:38.554 DEBUG - Handling: POST /session/0b983fd6-b563-403a-8bab-a8e8573c082c/url
+23:52:38.555 INFO - Executing: [get: http://localhost:3000/])
+23:52:38.556 DEBUG - Executing: get [1e72dfbb89fffe92e403016fa4134152, get {url=http://localhost:3000/}]
+23:52:38.557 DEBUG - CookieSpec selected: default
+23:52:38.557 DEBUG - Auth cache not set in the context
+23:52:38.557 DEBUG - Connection request: [route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.557 DEBUG - Connection leased: [id: 1][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+23:52:38.558 DEBUG - Opening connection {}->http://localhost:44585
+23:52:38.558 DEBUG - Connecting to localhost/127.0.0.1:44585
+23:52:38.558 DEBUG - Connection established 127.0.0.1:55759<->127.0.0.1:44585
+23:52:38.558 DEBUG - http-outgoing-1: set socket timeout to 10800000
+23:52:38.558 DEBUG - Executing request POST /session/1e72dfbb89fffe92e403016fa4134152/url HTTP/1.1
+23:52:38.559 DEBUG - Target auth state: UNCHALLENGED
+23:52:38.559 DEBUG - Proxy auth state: UNCHALLENGED
+23:52:38.559 DEBUG - http-outgoing-1 >> POST /session/1e72dfbb89fffe92e403016fa4134152/url HTTP/1.1
+23:52:38.559 DEBUG - http-outgoing-1 >> Content-Type: application/json; charset=utf-8
+23:52:38.559 DEBUG - http-outgoing-1 >> Content-Length: 32
+23:52:38.559 DEBUG - http-outgoing-1 >> Host: localhost:44585
+23:52:38.559 DEBUG - http-outgoing-1 >> Connection: Keep-Alive
+23:52:38.559 DEBUG - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)
+23:52:38.560 DEBUG - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+23:52:38.560 DEBUG - http-outgoing-1 >> "POST /session/1e72dfbb89fffe92e403016fa4134152/url HTTP/1.1[\r][\n]"
+23:52:38.560 DEBUG - http-outgoing-1 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+23:52:38.560 DEBUG - http-outgoing-1 >> "Content-Length: 32[\r][\n]"
+23:52:38.560 DEBUG - http-outgoing-1 >> "Host: localhost:44585[\r][\n]"
+23:52:38.560 DEBUG - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+23:52:38.560 DEBUG - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)[\r][\n]"
+23:52:38.560 DEBUG - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:52:38.561 DEBUG - http-outgoing-1 >> "[\r][\n]"
+23:52:38.561 DEBUG - http-outgoing-1 >> "{"url":"http://localhost:3000/"}"
+23:52:38.902 DEBUG - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+23:52:38.902 DEBUG - http-outgoing-1 << "Content-Length:72[\r][\n]"
+23:52:38.902 DEBUG - http-outgoing-1 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+23:52:38.903 DEBUG - http-outgoing-1 << "Connection:close[\r][\n]"
+23:52:38.903 DEBUG - http-outgoing-1 << "[\r][\n]"
+23:52:38.903 DEBUG - http-outgoing-1 << "{"sessionId":"1e72dfbb89fffe92e403016fa4134152","status":0,"value":null}"
+23:52:38.903 DEBUG - http-outgoing-1 << HTTP/1.1 200 OK
+23:52:38.903 DEBUG - http-outgoing-1 << Content-Length:72
+23:52:38.903 DEBUG - http-outgoing-1 << Content-Type:application/json; charset=utf-8
+23:52:38.904 DEBUG - http-outgoing-1 << Connection:close
+23:52:38.904 DEBUG - http-outgoing-1: Close connection
+23:52:38.904 DEBUG - Connection discarded
+23:52:38.905 DEBUG - Connection released: [id: 1][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.906 DEBUG - Executed: [1e72dfbb89fffe92e403016fa4134152, get {url=http://localhost:3000/}]
+23:52:38.906 INFO - Done: [get: http://localhost:3000/]
+23:52:38.906 DEBUG - Finished: POST /session/0b983fd6-b563-403a-8bab-a8e8573c082c/url
+23:52:38.913 DEBUG - Handling: POST /session/0b983fd6-b563-403a-8bab-a8e8573c082c/elements
+23:52:38.915 INFO - Executing: [find elements: By.cssSelector: body])
+23:52:38.915 DEBUG - Executing: findElements [1e72dfbb89fffe92e403016fa4134152, findElements {using=css selector, value=body}]
+23:52:38.916 DEBUG - CookieSpec selected: default
+23:52:38.916 DEBUG - Auth cache not set in the context
+23:52:38.917 DEBUG - Connection request: [route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.917 DEBUG - Connection leased: [id: 2][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+23:52:38.917 DEBUG - Opening connection {}->http://localhost:44585
+23:52:38.917 DEBUG - Connecting to localhost/127.0.0.1:44585
+23:52:38.917 DEBUG - Connection established 127.0.0.1:55765<->127.0.0.1:44585
+23:52:38.918 DEBUG - http-outgoing-2: set socket timeout to 10800000
+23:52:38.918 DEBUG - Executing request POST /session/1e72dfbb89fffe92e403016fa4134152/elements HTTP/1.1
+23:52:38.918 DEBUG - Target auth state: UNCHALLENGED
+23:52:38.918 DEBUG - Proxy auth state: UNCHALLENGED
+23:52:38.918 DEBUG - http-outgoing-2 >> POST /session/1e72dfbb89fffe92e403016fa4134152/elements HTTP/1.1
+23:52:38.918 DEBUG - http-outgoing-2 >> Content-Type: application/json; charset=utf-8
+23:52:38.918 DEBUG - http-outgoing-2 >> Content-Length: 39
+23:52:38.918 DEBUG - http-outgoing-2 >> Host: localhost:44585
+23:52:38.919 DEBUG - http-outgoing-2 >> Connection: Keep-Alive
+23:52:38.919 DEBUG - http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)
+23:52:38.919 DEBUG - http-outgoing-2 >> Accept-Encoding: gzip,deflate
+23:52:38.919 DEBUG - http-outgoing-2 >> "POST /session/1e72dfbb89fffe92e403016fa4134152/elements HTTP/1.1[\r][\n]"
+23:52:38.919 DEBUG - http-outgoing-2 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+23:52:38.919 DEBUG - http-outgoing-2 >> "Content-Length: 39[\r][\n]"
+23:52:38.919 DEBUG - http-outgoing-2 >> "Host: localhost:44585[\r][\n]"
+23:52:38.919 DEBUG - http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+23:52:38.920 DEBUG - http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)[\r][\n]"
+23:52:38.920 DEBUG - http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:52:38.920 DEBUG - http-outgoing-2 >> "[\r][\n]"
+23:52:38.920 DEBUG - http-outgoing-2 >> "{"using":"css selector","value":"body"}"
+23:52:38.937 DEBUG - http-outgoing-2 << "HTTP/1.1 200 OK[\r][\n]"
+23:52:38.937 DEBUG - http-outgoing-2 << "Content-Length:104[\r][\n]"
+23:52:38.937 DEBUG - http-outgoing-2 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+23:52:38.937 DEBUG - http-outgoing-2 << "Connection:close[\r][\n]"
+23:52:38.937 DEBUG - http-outgoing-2 << "[\r][\n]"
+23:52:38.938 DEBUG - http-outgoing-2 << "{"sessionId":"1e72dfbb89fffe92e403016fa4134152","status":0,"value":[{"ELEMENT":"0.3751774833071977-1"}]}"
+23:52:38.938 DEBUG - http-outgoing-2 << HTTP/1.1 200 OK
+23:52:38.938 DEBUG - http-outgoing-2 << Content-Length:104
+23:52:38.938 DEBUG - http-outgoing-2 << Content-Type:application/json; charset=utf-8
+23:52:38.938 DEBUG - http-outgoing-2 << Connection:close
+23:52:38.938 DEBUG - http-outgoing-2: Close connection
+23:52:38.938 DEBUG - Connection discarded
+23:52:38.939 DEBUG - Connection released: [id: 2][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.939 DEBUG - Executed: [1e72dfbb89fffe92e403016fa4134152, findElements {using=css selector, value=body}]
+23:52:38.950 INFO - Done: [find elements: By.cssSelector: body]
+23:52:38.950 DEBUG - Finished: POST /session/0b983fd6-b563-403a-8bab-a8e8573c082c/elements
+23:52:38.954 DEBUG - Handling: GET /session/0b983fd6-b563-403a-8bab-a8e8573c082c/element/0/displayed
+23:52:38.955 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (1e72dfbb89fffe92e403016fa4134152)] -> css selector: body]])
+23:52:38.955 DEBUG - Executing: isElementDisplayed [1e72dfbb89fffe92e403016fa4134152, isElementDisplayed {id=0.3751774833071977-1}]
+23:52:38.958 DEBUG - CookieSpec selected: default
+23:52:38.958 DEBUG - Auth cache not set in the context
+23:52:38.958 DEBUG - Connection request: [route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.958 DEBUG - Connection leased: [id: 3][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+23:52:38.958 DEBUG - Opening connection {}->http://localhost:44585
+23:52:38.959 DEBUG - Connecting to localhost/127.0.0.1:44585
+23:52:38.959 DEBUG - Connection established 127.0.0.1:55767<->127.0.0.1:44585
+23:52:38.959 DEBUG - http-outgoing-3: set socket timeout to 10800000
+23:52:38.960 DEBUG - Executing request GET /session/1e72dfbb89fffe92e403016fa4134152/element/0.3751774833071977-1/displayed HTTP/1.1
+23:52:38.960 DEBUG - Target auth state: UNCHALLENGED
+23:52:38.960 DEBUG - Proxy auth state: UNCHALLENGED
+23:52:38.960 DEBUG - http-outgoing-3 >> GET /session/1e72dfbb89fffe92e403016fa4134152/element/0.3751774833071977-1/displayed HTTP/1.1
+23:52:38.960 DEBUG - http-outgoing-3 >> Cache-Control: no-cache
+23:52:38.960 DEBUG - http-outgoing-3 >> Host: localhost:44585
+23:52:38.960 DEBUG - http-outgoing-3 >> Connection: Keep-Alive
+23:52:38.961 DEBUG - http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)
+23:52:38.961 DEBUG - http-outgoing-3 >> Accept-Encoding: gzip,deflate
+23:52:38.961 DEBUG - http-outgoing-3 >> "GET /session/1e72dfbb89fffe92e403016fa4134152/element/0.3751774833071977-1/displayed HTTP/1.1[\r][\n]"
+23:52:38.961 DEBUG - http-outgoing-3 >> "Cache-Control: no-cache[\r][\n]"
+23:52:38.961 DEBUG - http-outgoing-3 >> "Host: localhost:44585[\r][\n]"
+23:52:38.961 DEBUG - http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+23:52:38.961 DEBUG - http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)[\r][\n]"
+23:52:38.962 DEBUG - http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:52:38.962 DEBUG - http-outgoing-3 >> "[\r][\n]"
+23:52:38.971 DEBUG - http-outgoing-3 << "HTTP/1.1 200 OK[\r][\n]"
+23:52:38.971 DEBUG - http-outgoing-3 << "Content-Length:72[\r][\n]"
+23:52:38.972 DEBUG - http-outgoing-3 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+23:52:38.972 DEBUG - http-outgoing-3 << "Connection:close[\r][\n]"
+23:52:38.972 DEBUG - http-outgoing-3 << "[\r][\n]"
+23:52:38.972 DEBUG - http-outgoing-3 << "{"sessionId":"1e72dfbb89fffe92e403016fa4134152","status":0,"value":true}"
+23:52:38.972 DEBUG - http-outgoing-3 << HTTP/1.1 200 OK
+23:52:38.972 DEBUG - http-outgoing-3 << Content-Length:72
+23:52:38.972 DEBUG - http-outgoing-3 << Content-Type:application/json; charset=utf-8
+23:52:38.972 DEBUG - http-outgoing-3 << Connection:close
+23:52:38.973 DEBUG - http-outgoing-3: Close connection
+23:52:38.973 DEBUG - Connection discarded
+23:52:38.973 DEBUG - Connection released: [id: 3][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.974 DEBUG - Executed: [1e72dfbb89fffe92e403016fa4134152, isElementDisplayed {id=0.3751774833071977-1}]
+23:52:38.974 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (1e72dfbb89fffe92e403016fa4134152)] -> css selector: body]]
+23:52:38.974 DEBUG - Finished: GET /session/0b983fd6-b563-403a-8bab-a8e8573c082c/element/0/displayed
+23:52:38.979 DEBUG - Handling: POST /session/0b983fd6-b563-403a-8bab-a8e8573c082c/element
+23:52:38.980 INFO - Executing: [find element: By.cssSelector: body])
+23:52:38.980 DEBUG - Executing: findElement [1e72dfbb89fffe92e403016fa4134152, findElement {using=css selector, value=body}]
+23:52:38.981 DEBUG - CookieSpec selected: default
+23:52:38.981 DEBUG - Auth cache not set in the context
+23:52:38.981 DEBUG - Connection request: [route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.981 DEBUG - Connection leased: [id: 4][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+23:52:38.981 DEBUG - Opening connection {}->http://localhost:44585
+23:52:38.982 DEBUG - Connecting to localhost/127.0.0.1:44585
+23:52:38.982 DEBUG - Connection established 127.0.0.1:55769<->127.0.0.1:44585
+23:52:38.982 DEBUG - http-outgoing-4: set socket timeout to 10800000
+23:52:38.982 DEBUG - Executing request POST /session/1e72dfbb89fffe92e403016fa4134152/element HTTP/1.1
+23:52:38.982 DEBUG - Target auth state: UNCHALLENGED
+23:52:38.982 DEBUG - Proxy auth state: UNCHALLENGED
+23:52:38.982 DEBUG - http-outgoing-4 >> POST /session/1e72dfbb89fffe92e403016fa4134152/element HTTP/1.1
+23:52:38.983 DEBUG - http-outgoing-4 >> Content-Type: application/json; charset=utf-8
+23:52:38.983 DEBUG - http-outgoing-4 >> Content-Length: 39
+23:52:38.983 DEBUG - http-outgoing-4 >> Host: localhost:44585
+23:52:38.983 DEBUG - http-outgoing-4 >> Connection: Keep-Alive
+23:52:38.983 DEBUG - http-outgoing-4 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)
+23:52:38.983 DEBUG - http-outgoing-4 >> Accept-Encoding: gzip,deflate
+23:52:38.983 DEBUG - http-outgoing-4 >> "POST /session/1e72dfbb89fffe92e403016fa4134152/element HTTP/1.1[\r][\n]"
+23:52:38.983 DEBUG - http-outgoing-4 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+23:52:38.983 DEBUG - http-outgoing-4 >> "Content-Length: 39[\r][\n]"
+23:52:38.983 DEBUG - http-outgoing-4 >> "Host: localhost:44585[\r][\n]"
+23:52:38.983 DEBUG - http-outgoing-4 >> "Connection: Keep-Alive[\r][\n]"
+23:52:38.983 DEBUG - http-outgoing-4 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)[\r][\n]"
+23:52:38.984 DEBUG - http-outgoing-4 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:52:38.984 DEBUG - http-outgoing-4 >> "[\r][\n]"
+23:52:38.984 DEBUG - http-outgoing-4 >> "{"using":"css selector","value":"body"}"
+23:52:38.996 DEBUG - http-outgoing-4 << "HTTP/1.1 200 OK[\r][\n]"
+23:52:38.996 DEBUG - http-outgoing-4 << "Content-Length:102[\r][\n]"
+23:52:38.996 DEBUG - http-outgoing-4 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+23:52:38.996 DEBUG - http-outgoing-4 << "Connection:close[\r][\n]"
+23:52:38.997 DEBUG - http-outgoing-4 << "[\r][\n]"
+23:52:38.997 DEBUG - http-outgoing-4 << "{"sessionId":"1e72dfbb89fffe92e403016fa4134152","status":0,"value":{"ELEMENT":"0.3751774833071977-1"}}"
+23:52:38.997 DEBUG - http-outgoing-4 << HTTP/1.1 200 OK
+23:52:38.997 DEBUG - http-outgoing-4 << Content-Length:102
+23:52:38.997 DEBUG - http-outgoing-4 << Content-Type:application/json; charset=utf-8
+23:52:38.997 DEBUG - http-outgoing-4 << Connection:close
+23:52:38.997 DEBUG - http-outgoing-4: Close connection
+23:52:38.997 DEBUG - Connection discarded
+23:52:38.998 DEBUG - Connection released: [id: 4][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:38.998 DEBUG - Executed: [1e72dfbb89fffe92e403016fa4134152, findElement {using=css selector, value=body}]
+23:52:38.998 INFO - Done: [find element: By.cssSelector: body]
+23:52:38.999 DEBUG - Finished: POST /session/0b983fd6-b563-403a-8bab-a8e8573c082c/element
+23:52:39.001 DEBUG - Handling: GET /session/0b983fd6-b563-403a-8bab-a8e8573c082c/element/0/text
+23:52:39.002 INFO - Executing: [get text: 0 [[ChromeDriver: chrome on MAC (1e72dfbb89fffe92e403016fa4134152)] -> css selector: body]])
+23:52:39.002 DEBUG - Executing: getElementText [1e72dfbb89fffe92e403016fa4134152, getElementText {id=0.3751774833071977-1}]
+23:52:39.003 DEBUG - CookieSpec selected: default
+23:52:39.003 DEBUG - Auth cache not set in the context
+23:52:39.003 DEBUG - Connection request: [route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:39.003 DEBUG - Connection leased: [id: 5][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+23:52:39.003 DEBUG - Opening connection {}->http://localhost:44585
+23:52:39.003 DEBUG - Connecting to localhost/127.0.0.1:44585
+23:52:39.003 DEBUG - Connection established 127.0.0.1:55771<->127.0.0.1:44585
+23:52:39.004 DEBUG - http-outgoing-5: set socket timeout to 10800000
+23:52:39.004 DEBUG - Executing request GET /session/1e72dfbb89fffe92e403016fa4134152/element/0.3751774833071977-1/text HTTP/1.1
+23:52:39.004 DEBUG - Target auth state: UNCHALLENGED
+23:52:39.004 DEBUG - Proxy auth state: UNCHALLENGED
+23:52:39.004 DEBUG - http-outgoing-5 >> GET /session/1e72dfbb89fffe92e403016fa4134152/element/0.3751774833071977-1/text HTTP/1.1
+23:52:39.004 DEBUG - http-outgoing-5 >> Cache-Control: no-cache
+23:52:39.004 DEBUG - http-outgoing-5 >> Host: localhost:44585
+23:52:39.004 DEBUG - http-outgoing-5 >> Connection: Keep-Alive
+23:52:39.004 DEBUG - http-outgoing-5 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)
+23:52:39.004 DEBUG - http-outgoing-5 >> Accept-Encoding: gzip,deflate
+23:52:39.005 DEBUG - http-outgoing-5 >> "GET /session/1e72dfbb89fffe92e403016fa4134152/element/0.3751774833071977-1/text HTTP/1.1[\r][\n]"
+23:52:39.005 DEBUG - http-outgoing-5 >> "Cache-Control: no-cache[\r][\n]"
+23:52:39.005 DEBUG - http-outgoing-5 >> "Host: localhost:44585[\r][\n]"
+23:52:39.005 DEBUG - http-outgoing-5 >> "Connection: Keep-Alive[\r][\n]"
+23:52:39.005 DEBUG - http-outgoing-5 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)[\r][\n]"
+23:52:39.005 DEBUG - http-outgoing-5 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:52:39.005 DEBUG - http-outgoing-5 >> "[\r][\n]"
+23:52:39.028 DEBUG - http-outgoing-5 << "HTTP/1.1 200 OK[\r][\n]"
+23:52:39.028 DEBUG - http-outgoing-5 << "Content-Length:78[\r][\n]"
+23:52:39.028 DEBUG - http-outgoing-5 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+23:52:39.028 DEBUG - http-outgoing-5 << "Connection:close[\r][\n]"
+23:52:39.028 DEBUG - http-outgoing-5 << "[\r][\n]"
+23:52:39.028 DEBUG - http-outgoing-5 << "{"sessionId":"1e72dfbb89fffe92e403016fa4134152","status":0,"value":"Untitled"}"
+23:52:39.028 DEBUG - http-outgoing-5 << HTTP/1.1 200 OK
+23:52:39.028 DEBUG - http-outgoing-5 << Content-Length:78
+23:52:39.029 DEBUG - http-outgoing-5 << Content-Type:application/json; charset=utf-8
+23:52:39.029 DEBUG - http-outgoing-5 << Connection:close
+23:52:39.029 DEBUG - http-outgoing-5: Close connection
+23:52:39.029 DEBUG - Connection discarded
+23:52:39.029 DEBUG - Connection released: [id: 5][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:39.030 DEBUG - Executed: [1e72dfbb89fffe92e403016fa4134152, getElementText {id=0.3751774833071977-1}]
+23:52:39.030 INFO - Done: [get text: 0 [[ChromeDriver: chrome on MAC (1e72dfbb89fffe92e403016fa4134152)] -> css selector: body]]
+23:52:39.030 DEBUG - Finished: GET /session/0b983fd6-b563-403a-8bab-a8e8573c082c/element/0/text
+23:52:39.036 DEBUG - Handling: DELETE /session/0b983fd6-b563-403a-8bab-a8e8573c082c
+23:52:39.036 INFO - Executing: [delete session: 0b983fd6-b563-403a-8bab-a8e8573c082c])
+23:52:39.036 DEBUG - Executing: quit [1e72dfbb89fffe92e403016fa4134152, quit {}]
+23:52:39.037 DEBUG - CookieSpec selected: default
+23:52:39.037 DEBUG - Auth cache not set in the context
+23:52:39.037 DEBUG - Connection request: [route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:39.037 DEBUG - Connection leased: [id: 6][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+23:52:39.038 DEBUG - Opening connection {}->http://localhost:44585
+23:52:39.038 DEBUG - Connecting to localhost/127.0.0.1:44585
+23:52:39.038 DEBUG - Connection established 127.0.0.1:55773<->127.0.0.1:44585
+23:52:39.038 DEBUG - http-outgoing-6: set socket timeout to 10800000
+23:52:39.038 DEBUG - Executing request DELETE /session/1e72dfbb89fffe92e403016fa4134152 HTTP/1.1
+23:52:39.038 DEBUG - Target auth state: UNCHALLENGED
+23:52:39.038 DEBUG - Proxy auth state: UNCHALLENGED
+23:52:39.038 DEBUG - http-outgoing-6 >> DELETE /session/1e72dfbb89fffe92e403016fa4134152 HTTP/1.1
+23:52:39.039 DEBUG - http-outgoing-6 >> Host: localhost:44585
+23:52:39.039 DEBUG - http-outgoing-6 >> Connection: Keep-Alive
+23:52:39.039 DEBUG - http-outgoing-6 >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)
+23:52:39.039 DEBUG - http-outgoing-6 >> Accept-Encoding: gzip,deflate
+23:52:39.039 DEBUG - http-outgoing-6 >> "DELETE /session/1e72dfbb89fffe92e403016fa4134152 HTTP/1.1[\r][\n]"
+23:52:39.039 DEBUG - http-outgoing-6 >> "Host: localhost:44585[\r][\n]"
+23:52:39.039 DEBUG - http-outgoing-6 >> "Connection: Keep-Alive[\r][\n]"
+23:52:39.039 DEBUG - http-outgoing-6 >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_31)[\r][\n]"
+23:52:39.039 DEBUG - http-outgoing-6 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:52:39.040 DEBUG - http-outgoing-6 >> "[\r][\n]"
+23:52:39.091 DEBUG - http-outgoing-6 << "HTTP/1.1 200 OK[\r][\n]"
+23:52:39.091 DEBUG - http-outgoing-6 << "Content-Length:72[\r][\n]"
+23:52:39.091 DEBUG - http-outgoing-6 << "Content-Type:application/json; charset=utf-8[\r][\n]"
+23:52:39.091 DEBUG - http-outgoing-6 << "Connection:close[\r][\n]"
+23:52:39.091 DEBUG - http-outgoing-6 << "[\r][\n]"
+23:52:39.091 DEBUG - http-outgoing-6 << "{"sessionId":"1e72dfbb89fffe92e403016fa4134152","status":0,"value":null}"
+23:52:39.091 DEBUG - http-outgoing-6 << HTTP/1.1 200 OK
+23:52:39.091 DEBUG - http-outgoing-6 << Content-Length:72
+23:52:39.091 DEBUG - http-outgoing-6 << Content-Type:application/json; charset=utf-8
+23:52:39.092 DEBUG - http-outgoing-6 << Connection:close
+23:52:39.092 DEBUG - http-outgoing-6: Close connection
+23:52:39.092 DEBUG - Connection discarded
+23:52:39.092 DEBUG - Connection released: [id: 6][route: {}->http://localhost:44585][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+23:52:39.093 DEBUG - Waiting for http://localhost:44585/shutdown
+23:52:39.093 DEBUG - Polling http://localhost:44585/shutdown
+23:52:39.094 DEBUG - sun.net.www.MessageHeader@472912375 pairs: {GET /shutdown HTTP/1.1: null}{User-Agent: Java/1.8.0_31}{Host: localhost:44585}{Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2}{Connection: keep-alive}
+23:52:39.095 DEBUG - sun.net.www.MessageHeader@505635634 pairs: {null: HTTP/1.1 200 OK}{Content-Length: 40}{Content-Type: application/json; charset=utf-8}{Connection: close}
+23:52:39.596 DEBUG - Polling http://localhost:44585/shutdown
+23:52:39.598 DEBUG - Executed: [1e72dfbb89fffe92e403016fa4134152, quit {}]
+23:52:39.599 INFO - Done: [delete session: 0b983fd6-b563-403a-8bab-a8e8573c082c]
+23:52:39.600 DEBUG - Finished: DELETE /session/0b983fd6-b563-403a-8bab-a8e8573c082c
