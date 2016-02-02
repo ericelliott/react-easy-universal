@@ -54,5 +54,4 @@ npm run test:e2e
 
 ## Server functional Tests
 
-Server functional tests hit the server routes without loading the client, testing that the expected responses are delivered.
-
+Server functional tests hit the server routes without loading the client, testing that the expected responses are delivered. Server functional tests may hit the network, third party APIs, and database resources.
