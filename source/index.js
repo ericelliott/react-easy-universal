@@ -16,6 +16,10 @@ const universal = ({ React, app, routes, reducers }) => {
 
     return app;
   }
+
+  // Client case. Plug in browserHistory, etc...
+  const createClientApp = require('./client').default;
+  return createClientApp({ React, createRoutes: routes, reducers });
 };
 
 export default universal;

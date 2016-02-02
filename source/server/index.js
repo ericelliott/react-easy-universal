@@ -1,9 +1,9 @@
 import { match } from 'react-router';
 
-import renderLayout from './render-layout.js';
-import render from './render.js';
+import renderLayout from './render-layout';
+import render from './render';
 
-import configureStore from './configure-store.js';
+import configureStore from '../shared/configure-store';
 
 export default ({ React, createRoutes, reducers }) => (req, res) => {
   const routes = createRoutes(React);
@@ -23,8 +23,6 @@ export default ({ React, createRoutes, reducers }) => (req, res) => {
     } else if (renderProps) {
       const rootMarkup = render(React)(renderProps, store);
       res.status(200).send(renderLayout({ rootMarkup, initialState }));
-    } else {
-      res.status(404).send('Not found');
     }
   });
 };
