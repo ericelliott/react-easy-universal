@@ -1,7 +1,8 @@
 import { Router, Route, connect } from '../../index';
 
 // It expects a factory function that it can inject dependencies into.
-export default (React, browserHistory) => {
+export default ({ React }) => {
+
   const Home = React => {
     const component = ({ title }) => <h1 className="title">{ title }</h1>;
 
@@ -25,7 +26,7 @@ export default (React, browserHistory) => {
   };
 
   return (
-    <Router history={ browserHistory }>
+    <Router>
       <Route path="/" component={ Home(React) } />
       <Route path="/data" component={ Data(React) } />
     </Router>

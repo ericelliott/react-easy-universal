@@ -7,7 +7,7 @@ import configureStore from '../shared/configure-store';
 const createClientApp = ({
     React, createRoutes, reducers, initialState = {}
   }) => {
-  const routes = createRoutes(React, browserHistory);
+  const routes = createRoutes({ React });
 
   const store = configureStore({
     initialState: window.BOOTSTRAP_CLIENT_STATE ?
@@ -20,7 +20,7 @@ const createClientApp = ({
 
     ReactDOM.render(
       <Provider store={ store }>
-        <Router routes={ routes } />
+        <Router routes={ routes } history={ browserHistory }/>
       </Provider>,
       document.getElementById('root')
     );

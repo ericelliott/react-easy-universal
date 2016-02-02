@@ -6,7 +6,7 @@ import render from './render';
 import configureStore from '../shared/configure-store';
 
 export default ({ React, createRoutes, reducers }) => (req, res) => {
-  const routes = createRoutes(React);
+  const routes = createRoutes({ React });
 
   const store = configureStore({
     initialState: res.locals.context,

@@ -12,7 +12,7 @@
     "build:test": "browserify source/test/client/index.js -o build/index.js -t [ babelify --presets [ es2015 react ] ]",
     "lint": "eslint --cache .",
     "watch": "watch \"clear && npm run lint -s && npm run test -s\" source",
-    "watch:client": "watch \"clear && npm run lint -s && echo 'Lint passed. Watching...' && npm run -s build:test\" source",
+    "watch:client": "watch \"clear && npm run lint -s && npm run -s test && npm run -s build:test\" source",
     "check": "npm run lint && npm run test && npm outdated --depth=0",
     "debug:test": "iron-node source/test/debug.js",
     "update": "updtr"

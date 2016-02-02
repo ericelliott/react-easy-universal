@@ -1,3 +1,3 @@
 import 'babel-polyfill';
-import './basics';
-import './server';
+import './basics/index';
+import './server/index';
