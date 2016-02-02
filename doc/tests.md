@@ -1,5 +1,9 @@
 # Testing Universal Applications
 
+Testing Universal Applications requires a more thorough approach than testing typical single page apps. Because the server may render exactly what the client renders, it can be impossible to determine whether the server rendered something, or whether the client rendered something without testing server responses and client renders in isolation from each other.
+
+Therefore, you need a multi-layered approach to testing.
+
 Before running tests:
 
 1. Clone the repo.
