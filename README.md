@@ -172,10 +172,10 @@ import createHome from 'shared/components/home';
 import createTestData from 'shared/components/test-data';
 
 // It expects a factory function that it can inject dependencies into.
-export default (React, browserHistory) => {
+export default (React) => {
 
   return (
-    <Router history={ browserHistory }>
+    <Router>
       <Route path="/" component={ createHome(React) } />
       <Route path="/test-data" component={ createTestData(React) } />
     </Router>
@@ -184,7 +184,7 @@ export default (React, browserHistory) => {
 ```
 
 
-## Advanced Example
+## Advanced Example (note: unfinished)
 
 Need to customize layouts, the root React Node, the root route, and so on? No problem. Just make your `create-app.js` factory configurable:
 
