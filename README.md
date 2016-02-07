@@ -15,88 +15,6 @@ Proof of concept. Needs testing. Kick the tires.
 * [History](https://github.com/rackt/history)
 * Debugging support
 
-## Why is this needed? (AKA, the old `n` busted way)
-
-Universal routing & rendering with React and Redux is pretty great. For serious app projects, it can save you a ton of time, but if you have ever tried configuring it yourself, you'll know, it's a lot harder than it should be. Just to give you an idea of how complicated it can be, here's the example from `redux-simple-router`, which is AFAIK, the easiest way to configure this stuff right now:
-
-```js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import { Router, Route, browserHistory } from 'react-router'
-import { syncHistory, routeReducer } from 'redux-simple-router'
-import reducers from '<project-path>/reducers'
-
-const reducer = combineReducers(Object.assign({}, reducers, {
-  routing: routeReducer
-}))
-
-// Sync dispatched route actions to the history
-const reduxRouterMiddleware = syncHistory(browserHistory)
-const createStoreWithMiddleware = applyMiddleware(reduxRouterMiddleware)(createStore)
-
-const store = createStoreWithMiddleware(reducer)
-
-// Required for replaying actions from devtools to work
-reduxRouterMiddleware.listenForReplays(store)
-
-ReactDOM.render(
-  <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path="/" component={App}>
-        <Route path="foo" component={Foo}/>
-        <Route path="bar" component={Bar}/>
-      </Route>
-    </Router>
-  </Provider>,
-  document.getElementById('mount')
-)
-```
-
-That's six dependencies that you have to manage in your own app, and good luck getting all the right versions that will play together nicely. And this is just the client side. The code above doesn't work on the server. To get that going, you'll have to create an Express route handler that manually calls `match()` from `react-router`, checks for errors & redirects, and maybe renders the document. It looks something like this:
-
-
-```js
-import React from 'react';
-import { match } from 'react-router';
-
-import renderLayout from 'server/render-layout';
-import render from 'server/render';
-import settings from 'server/settings';
-
-import configureStore from 'shared/configure-store';
-import createRoutes from 'shared/routes';
-
-const store = configureStore();
-const routes = createRoutes(React);
-const initialState = store.getState();
-
-export default (req, res) => {
-  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      res.status(500).send(error.message);
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-    } else if (renderProps) {
-      const rootMarkup = render(React)(renderProps, store);
-      res.status(200).send(renderLayout({ settings, rootMarkup, initialState }));
-    } else {
-      res.status(404).send('Not found');
-    }
-  });
-};
-```
-
-There are a few other files you need to wire up that I won't list, for brevity's sake.
-
-It took me two days to get these examples working in one of my own projects. 2 days of fiddling with dependencies, copying the exact versions out of the example repositories and into my `package.json`. These projects are evolving quickly, and the documentation examples can't be relied on to work.
-
-So, you could keep track of all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around.
-
-Now let's look at what this could look like:
-
-
 ## Getting Started
 
 You'll need to create three files:
@@ -182,6 +100,86 @@ export default (React) => {
   );
 };
 ```
+
+
+## Why is this needed? (AKA, the old `n` busted way)
+
+Universal routing & rendering with React and Redux is pretty great. For serious app projects, it can save you a ton of time, but if you have ever tried configuring it yourself, you'll know, it's a lot harder than it should be. Just to give you an idea of how complicated it can be, here's the example from `redux-simple-router`, which is AFAIK, the easiest way to configure this stuff right now:
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import { Router, Route, browserHistory } from 'react-router'
+import { syncHistory, routeReducer } from 'redux-simple-router'
+import reducers from '<project-path>/reducers'
+
+const reducer = combineReducers(Object.assign({}, reducers, {
+  routing: routeReducer
+}))
+
+// Sync dispatched route actions to the history
+const reduxRouterMiddleware = syncHistory(browserHistory)
+const createStoreWithMiddleware = applyMiddleware(reduxRouterMiddleware)(createStore)
+
+const store = createStoreWithMiddleware(reducer)
+
+// Required for replaying actions from devtools to work
+reduxRouterMiddleware.listenForReplays(store)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <Route path="foo" component={Foo}/>
+        <Route path="bar" component={Bar}/>
+      </Route>
+    </Router>
+  </Provider>,
+  document.getElementById('mount')
+)
+```
+
+That's six dependencies that you have to manage in your own app, and good luck getting all the right versions that will play together nicely. And this is just the client side. The code above doesn't work on the server. To get that going, you'll have to create an Express route handler that manually calls `match()` from `react-router`, checks for errors & redirects, and maybe renders the document. It looks something like this:
+
+
+```js
+import React from 'react';
+import { match } from 'react-router';
+
+import renderLayout from 'server/render-layout';
+import render from 'server/render';
+import settings from 'server/settings';
+
+import configureStore from 'shared/configure-store';
+import createRoutes from 'shared/routes';
+
+const store = configureStore();
+const routes = createRoutes(React);
+const initialState = store.getState();
+
+export default (req, res) => {
+  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    if (error) {
+      res.status(500).send(error.message);
+    } else if (redirectLocation) {
+      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+    } else if (renderProps) {
+      const rootMarkup = render(React)(renderProps, store);
+      res.status(200).send(renderLayout({ settings, rootMarkup, initialState }));
+    } else {
+      res.status(404).send('Not found');
+    }
+  });
+};
+```
+
+There are a few other files you need to wire up that I won't list, for brevity's sake.
+
+It took me two days to get these examples working in one of my own projects. 2 days of fiddling with dependencies, copying the exact versions out of the example repositories and into my `package.json`. These projects are evolving quickly, and the documentation examples can't be relied on to work.
+
+So, you could keep track of all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around.
 
 
 ## Advanced Example (note: unfinished)
