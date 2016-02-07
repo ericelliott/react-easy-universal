@@ -32,10 +32,10 @@ The browser unit tests don't exercise the server rendering. Instead, they render
 
 ```sh
 npm run build:test
-npm run start:test-server
+npm run start:client-tests
 ```
 
-Open `http://localhost:3000/static/` in your browser.
+Open `http://localhost:3000/` in your browser.
 
 To get automated rebuilds on change:
 

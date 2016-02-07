@@ -23,16 +23,6 @@ test('Client app', nest => {
     assert.end();
   });
 
-  nest.test('...client call', assert => {
-    const msg = 'should return store instance';
-
-    const actual = typeof store.dispatch;
-    const expected = 'function';
-
-    assert.equal(actual, expected, msg);
-    assert.end();
-  });
-
   nest.test('...initalState', assert => {
     const msg = 'should render initialState';
     const text = 'Untitled';
@@ -43,6 +33,17 @@ test('Client app', nest => {
     assert.equal(actual, expected, msg);
     assert.end();
   });
+
+  nest.test('...client call', assert => {
+    const msg = 'should return store instance';
+
+    const actual = typeof store.dispatch;
+    const expected = 'function';
+
+    assert.equal(actual, expected, msg);
+    assert.end();
+  });
+
 
   nest.test('...with dispatch', assert => {
     const msg = 'should render new output';

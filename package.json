@@ -4,13 +4,13 @@
   "description": "Universal Routing & Rendering with React & Redux was too hard. Now it's easy.",
   "main": "dist/index.js",
   "scripts": {
-    "clean": "rimraf build && mkdir -p build && cp source/test/fixtures/index.html ./build/index.html",
-    "start:test-server": "babel-node source/test/start-server.js",
+    "clean": "rimraf build && mkdir -p build && mkdir -p build/static && cp source/test/fixtures/index.html ./build/index.html",
+    "start:client-tests": "serve build",
     "test": "babel-node source/test/index.js",
     "test:e2e": "cross-env NODE_PORT=3000 NODE_PATH=source babel-node source/test/e2e.js",
     "build:client": "browserify source/test/fixtures/client.js -o build/index.js -t [ babelify --presets [ es2015 react ] ]",
     "prebuild:test": "npm run -s clean && npm run -s build:client",
-    "build:test": "browserify source/test/client/index.js -o build/browser-tests.js -t [ babelify --presets [ es2015 react ] ]",
+    "build:test": "browserify source/test/client/index.js -o build/static/browser-tests.js -t [ babelify --presets [ es2015 react ] ]",
     "lint": "eslint .",
     "watch": "watch \"clear && npm run lint -s && npm run test -s\" source",
     "watch:client": "watch \"clear && npm run lint -s && npm run -s test && npm run -s build:test\" source",
@@ -44,7 +44,8 @@
     "react-router": "2.0.0-rc5",
     "react-router-redux": "2.1.0",
     "redux": "3.0.6",
-    "redux-thunk": "1.0.3"
+    "redux-thunk": "1.0.3",
+    "serve": "1.4.0"
   },
   "devDependencies": {
     "babel-cli": "6.4.5",
