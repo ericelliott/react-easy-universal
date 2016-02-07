@@ -1,6 +1,6 @@
 {
   "name": "react-easy-universal",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Universal Routing & Rendering with React & Redux was too hard. Now it's easy.",
   "main": "dist/index.js",
   "scripts": {
