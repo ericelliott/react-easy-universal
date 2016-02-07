@@ -188,9 +188,9 @@ It took me two days to get these examples working in one of my own projects. 2 d
 So, you could keep track of all these dependency versions yourself (and they're all being rapidly updated) -- or, you could use this library, plug in your routes & reducers, and get on with building an actual application instead of chasing all the moving parts around.
 
 
-## Advanced Example (note: unfinished)
+## Advanced Configuration (note: unfinished)
 
-Need to customize layouts, the root React Node, the root route, and so on? No problem. Just make your `create-app.js` factory configurable:
+Need to customize layouts, the root React Node, the root route, and so on? No problem. Just make your `wire-app.js` factory configurable:
 
 ```js
 import universal from 'react-easy-universal';
@@ -198,7 +198,7 @@ import universal from 'react-easy-universal';
 import routes from './path/to/your/routes';
 import reducers from './path/to/your/reducers';
 
-const createApp = ({
+const wireApp = ({
   React, app,
   rootID, // default: 'root'
   rootRoute, // default: '/'
@@ -209,7 +209,7 @@ const createApp = ({
   rootId, rootRoute, renderLayout
 });
 
-export default createApp;
+export default wireApp;
 ```
 
 ## Contributing
