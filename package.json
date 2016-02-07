@@ -6,14 +6,15 @@
   "scripts": {
     "clean": "rimraf build && mkdir -p build && mkdir -p build/static && cp source/test/fixtures/index.html ./build/index.html",
     "start:client-tests": "serve build",
+    "start:server": "babel-node source/test/start-server.js",
     "test": "babel-node source/test/index.js",
     "test:e2e": "cross-env NODE_PORT=3000 NODE_PATH=source babel-node source/test/e2e.js",
     "build:client": "browserify source/test/fixtures/client.js -o build/index.js -t [ babelify --presets [ es2015 react ] ]",
     "prebuild:test": "npm run -s clean && npm run -s build:client",
-    "build:test": "browserify source/test/client/index.js -o build/static/browser-tests.js -t [ babelify --presets [ es2015 react ] ]",
+    "build:test": "browserify source/test/client/index.js -o build/static/browser-tests.js -t [ babelify --presets [ es2015 react ] ] && cp build/static/browser-tests.js build/.",
     "lint": "eslint .",
     "watch": "watch \"clear && npm run lint -s && npm run test -s\" source",
-    "watch:client": "watch \"clear && npm run lint -s && npm run -s test && npm run -s build:test\" source",
+    "watch:client": "watch \"clear && npm run lint -s && npm run -s build:test && npm run -s test\" source",
     "check": "npm run lint && npm run test && npm outdated --depth=0",
     "debug:test": "iron-node source/test/debug.js",
     "update": "updtr"

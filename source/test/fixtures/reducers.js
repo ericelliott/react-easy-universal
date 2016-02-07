@@ -7,18 +7,14 @@ const reducers = {
   title: (state = initialState.title, action) => {
     switch (action.type) {
       case 'SET_TITLE':
-        return Object.assign({}, state, {
-          title: action.title
-        });
+        return action.title;
       default: return state;
     }
   },
   data: (state = initialState.data, action) => {
     switch (action.type) {
       case 'SET_DATA':
-        return Object.assign({}, state, {
-          data: action.data
-        });
+        return action.data;
       default: return state;
     }
   }

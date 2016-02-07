@@ -62,4 +62,22 @@ test('Client app', nest => {
       assert.end();
     }, 100);
   });
+
+  nest.test('...with second dispatch', assert => {
+    const msg = 'should render new output';
+    const text = 'Client render 2';
+
+    store.dispatch({
+      type: 'SET_TITLE',
+      title: text
+    });
+
+    setTimeout(() => {
+      const actual = document.querySelectorAll('.title')[0].innerHTML;
+      const expected = text;
+
+      assert.equal(actual, expected, msg);
+      assert.end();
+    }, 100);
+  });
 });

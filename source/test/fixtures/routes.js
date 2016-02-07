@@ -4,7 +4,9 @@ import { Router, Route, connect } from '../../index';
 export default ({ React }) => {
 
   const Home = React => {
-    const component = ({ title }) => <h1 className="title">{ title }</h1>;
+    const component = ({ title }) => {
+      return (<h1 className="title">{ title }</h1>);
+    };
 
     const mapStateToProps = (state) => {
       const { title } = state;
