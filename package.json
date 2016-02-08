@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericelliott/react-easy-universal.git"
+    "url": "git+https://github.com/keystonejs/react-easy-universal.git"
   },
   "keywords": [
     "react",
@@ -36,9 +36,9 @@
   "author": "Eric Elliott",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ericelliott/react-easy-universal/issues"
+    "url": "https://github.com/keystonejs/react-easy-universal/issues"
   },
-  "homepage": "https://github.com/ericelliott/react-easy-universal#readme",
+  "homepage": "https://github.com/keystonejs/react-easy-universal#readme",
   "dependencies": {
     "cross-env": "1.0.7",
     "react": "0.14.7",
