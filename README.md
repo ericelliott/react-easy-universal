@@ -17,31 +17,13 @@ Proof of concept. Needs testing. Kick the tires.
 
 ## Getting Started
 
-You'll need to create three files:
-
-`wire-app.js`:
-
-```js
-import universal from 'react-easy-universal';
-
-import routes from './routes';
-import reducers from './reducers';
-
-const wireApp = ({
-  React, app
-}) => universal({
-  React, app, routes, reducers
-});
-
-export default wireApp;
-```
-
+You'll need to create two files:
 
 `client.js`:
 
 ```js
 import React from 'react';
-import wireApp from './wire-app.js';
+import universal from 'react-easy-universal/client';
 
 // returns a function that must be invoked to trigger render
 const app = wireApp({ React }); // use all the defaults
@@ -63,8 +45,7 @@ store.dispatch({
 ```js
 import express from 'express';
 import React from 'react';
-
-import wireApp from './wire-app.js';
+import universal from 'react-easy-universal/server';
 
 // Passing in the express app lets it know you want the server
 // version, and it wires up the routes automatically
@@ -90,7 +71,7 @@ app.listen(port, (err) => {
 Use this module instead of depending directly on React Router, and we'll worry about keeping all the version dependencies compatible and in-sync for you.
 
 ```js
-import { Router, Route } from 'react-easy-universal';
+import { Router, Route } from 'react-easy-universal/route-helpers';
 
 import createHome from 'shared/components/home';
 import createTestData from 'shared/components/test-data';
