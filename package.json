@@ -2,8 +2,6 @@
   "name": "react-easy-universal",
   "version": "1.0.0",
   "description": "Universal Routing & Rendering with React & Redux was too hard. Now it's easy.",
-  "main": "dist/",
-  "browser": "dist/",
   "scripts": {
     "clean": "rimraf dist && rimraf build && mkdir -p dist && mkdir -p dist/client && mkdir -p build && mkdir -p build/static && cp source/test/fixtures/index.html ./build/index.html",
     "prestart:client-tests": "npm run clean && npm run build && npm run build:test",
@@ -16,7 +14,8 @@
     "build:test": "browserify -d source/test/client/index.js -o build/static/browser-tests.js -t [ babelify --presets [ es2015 react ] ] && cp build/static/browser-tests.js build/.",
     "build:client": "browserify -d source/client/index.js -o dist/client/index.js -t [ babelify --presets [ es2015 react ] ]",
     "build:server": "babel -s -d dist/server source/server && babel -s -d dist/shared source/shared",
-    "build": "npm run -s clean && npm run -s build:test-client && npm run -s build:test && npm run -s build:client && npm run -s build:server",
+    "build:warn": "cp source/importer/index.js dist/index.js",
+    "build": "npm run -s clean && npm run -s build:test-client && npm run -s build:test && npm run -s build:warn && npm run -s build:client && npm run -s build:server",
     "prepublish": "npm run build",
     "lint": "eslint .",
     "watch": "watch \"clear && npm run lint -s && npm run test -s\" source",

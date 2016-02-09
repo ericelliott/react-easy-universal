@@ -23,7 +23,10 @@ You'll need to create two files:
 
 ```js
 import React from 'react';
-import universal from 'react-easy-universal/client';
+
+// Note: There are two versions of the client: bundled and source.
+// If you want to build from source, try `react-easy-universal/client-src`.
+import universal from 'react-easy-universal/client-bundled';
 
 // returns a function that must be invoked to trigger render
 const app = wireApp({ React }); // use all the defaults
@@ -64,6 +67,10 @@ app.listen(port, (err) => {
   console.log(`Listening at http://localhost:${ port }`);
 });
 ```
+
+Note: There is nothing exported from `react-easy-universal` by default. You must
+use one of the client or the server. They are two different builds in order to
+save on client download time.
 
 
 ### Defining Your Routes
