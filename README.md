@@ -17,31 +17,16 @@ Proof of concept. Needs testing. Kick the tires.
 
 ## Getting Started
 
-You'll need to create three files:
-
-`wire-app.js`:
-
-```js
-import universal from 'react-easy-universal';
-
-import routes from './routes';
-import reducers from './reducers';
-
-const wireApp = ({
-  React, app
-}) => universal({
-  React, app, routes, reducers
-});
-
-export default wireApp;
-```
-
+You'll need to create two files:
 
 `client.js`:
 
 ```js
 import React from 'react';
-import wireApp from './wire-app.js';
+
+// Note: There are two versions of the client: bundled and source.
+// If you want to build from source, try `react-easy-universal/client-src`.
+import universal from 'react-easy-universal/client-bundled';
 
 // returns a function that must be invoked to trigger render
 const app = wireApp({ React }); // use all the defaults
@@ -63,8 +48,7 @@ store.dispatch({
 ```js
 import express from 'express';
 import React from 'react';
-
-import wireApp from './wire-app.js';
+import universal from 'react-easy-universal/server';
 
 // Passing in the express app lets it know you want the server
 // version, and it wires up the routes automatically
@@ -84,13 +68,17 @@ app.listen(port, (err) => {
 });
 ```
 
+Note: There is nothing exported from `react-easy-universal` by default. You must
+use one of the client or the server. They are two different builds in order to
+save on client download time.
+
 
 ### Defining Your Routes
 
 Use this module instead of depending directly on React Router, and we'll worry about keeping all the version dependencies compatible and in-sync for you.
 
 ```js
-import { Router, Route } from 'react-easy-universal';
+import { Router, Route } from 'react-easy-universal/route-helpers';
 
 import createHome from 'shared/components/home';
 import createTestData from 'shared/components/test-data';
