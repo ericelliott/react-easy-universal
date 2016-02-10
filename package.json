@@ -1,6 +1,6 @@
 {
   "name": "react-easy-universal",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Universal Routing & Rendering with React & Redux was too hard. Now it's easy.",
   "scripts": {
     "clean": "rimraf dist && rimraf build && mkdir -p dist && mkdir -p dist/client && mkdir -p build && mkdir -p build/static && cp source/test/fixtures/index.html ./build/index.html",
